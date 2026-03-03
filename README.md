@@ -44,7 +44,8 @@ ResearchAtlas is a curated paper atlas for systems, infrastructure, and algorith
 
 ## Figures
 
-![Topic growth by year](figures/topic_growth_by_year.svg)
+![Topic growth by year](figures/topic_growth_by_year.png)
+- Regenerate this figure with `figures/generate_topic_growth.py`.
 
 ## Repository Layout
 
