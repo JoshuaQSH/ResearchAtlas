@@ -17,3 +17,15 @@
 - **Why included:** One of the core post-training quantization references for practical LLM deployment.
 - **Venue:** ICML 2023
 - **Paper Link:** https://proceedings.mlr.press/v202/xiao23c.html
+
+## [CausalSim: A Causal Framework for Unbiased Trace-Driven Simulation]
+
+- **Why included:** Official NSDI 2023 Best Paper from USENIX.
+- **Venue:** NSDI 2023
+- **Paper Link:** https://www.usenix.org/conference/nsdi23/presentation/alomar
+
+## [zpoline: A System Call Hook Mechanism Based on Binary Rewriting]
+
+- **Why included:** Official USENIX ATC 2023 Best Paper.
+- **Venue:** USENIX ATC 2023
+- **Paper Link:** https://www.usenix.org/conference/atc23/presentation/yasukata
