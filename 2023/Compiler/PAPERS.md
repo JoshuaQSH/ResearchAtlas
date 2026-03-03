@@ -30,3 +30,34 @@ FlashAttention-2 extends the original IO-aware attention idea with improved work
 ### Potential Drawbacks
 - Gains depend on GPU generation and attention shape.
 - Real integration still requires framework support and careful kernel dispatch choices.
+
+## [Mosaic: An Interoperable Compiler for Tensor Algebra]
+
+- **Authors:** Manya Bansal, Olivia Hsu, Kunle Olukotun, Fredrik Kjolstad
+- **Venue:** OOPSLA 2023
+- **Year:** 2023
+- **Tags:** Compiler Optimization, Sparse Matrix & Kernels
+- **Paper Link:** https://dblp.org/rec/journals/pacmpl/BansalHOK23
+- **Code Link:** N/A
+
+### Short Summary
+Mosaic addresses a common compiler fragmentation problem in tensor algebra systems: different IRs and execution backends are difficult to compose cleanly. The paper presents an interoperable compiler design aimed at making tensor algebra compilation more modular. That matters because AI and scientific-computing workloads increasingly rely on specialized sparse and dense tensor operations that span multiple compiler ecosystems. The work is relevant to the atlas as a language-and-compiler contribution sitting close to ML operator generation. It also broadens conference coverage into OOPSLA without abandoning the tensor-program focus.
+
+### Core Innovation
+- Interoperable compiler design for tensor algebra workloads.
+- Better composition across tensor abstractions and backends.
+- Language-and-systems approach to compiler modularity for numeric programs.
+
+### Technical Approach
+- Tensor algebra programs are lowered through a compiler interface designed for interoperability.
+- The system focuses on preserving algebraic structure while enabling backend-specific optimization.
+- Compilation stages are organized so different tools can share tensor representations more effectively.
+
+### Results
+- Evaluated on tensor-algebra and sparse/dense numeric kernels.
+- The paper reports improved interoperability with competitive performance.
+- Results suggest compiler modularity does not have to come at the expense of optimization quality.
+
+### Potential Drawbacks
+- Interoperability layers can still introduce engineering complexity.
+- The work is more compiler-architecture-oriented than end-to-end ML system benchmarking.

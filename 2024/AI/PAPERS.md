@@ -65,7 +65,7 @@ BitNet b1.58 is one of the boldest compression claims in the recent LLM literatu
 ## [Collaborative Large Language Model for Recommender Systems]
 
 - **Authors:** Yaochen Zhu, Liang Wu, Qi Guo, Liangjie Hong, Jundong Li
-- **Venue:** WWW 2024
+- **Venue:** WWW / The Web Conference 2024
 - **Year:** 2024
 - **Tags:** LLM Systems & Algorithms, Explainable AI
 - **Paper Link:** https://dblp.org/rec/conf/www/ZhuWGHL24
@@ -92,3 +92,65 @@ This WWW paper studies how large language models can participate in recommender-
 ### Potential Drawbacks
 - Real production relevance depends on latency and cost constraints.
 - Explanatory usefulness can still diverge from actual decision faithfulness.
+
+## [Large Language Models meet Collaborative Filtering: An Efficient All-round LLM-based Recommender System]
+
+- **Authors:** Sein Kim, Hongseok Kang, Seungyoon Choi, Donghyun Kim, Min-Chul Yang, Chanyoung Park
+- **Venue:** KDD 2024
+- **Year:** 2024
+- **Tags:** LLM Systems & Algorithms, Explainable AI
+- **Paper Link:** https://dblp.org/rec/conf/kdd/KimKC0YP24
+- **Code Link:** N/A
+
+### Short Summary
+This KDD paper studies how large language models can be integrated into collaborative filtering without making the resulting system prohibitively expensive. The work is important because recommendation is a natural application area for LLM reasoning, but end-to-end efficiency often blocks deployment. The paper positions LLMs as components in an all-round recommender rather than as standalone generators. That design focus makes it relevant to both AI algorithms and practical systems concerns. It also gives KDD direct representation in the atlas with an LLM-centric paper.
+
+### Core Innovation
+- Efficient recommender design that incorporates LLM capabilities.
+- Practical balance between model expressiveness and serving cost.
+- Clear integration of recommendation and language-model reasoning.
+
+### Technical Approach
+- The system combines collaborative-filtering signals with LLM-driven components.
+- It focuses on reducing overhead so the hybrid design remains deployable.
+- Evaluation studies both recommendation quality and practical efficiency tradeoffs.
+
+### Results
+- Benchmarks target recommender-system datasets and ranking tasks.
+- The paper reports favorable quality-efficiency tradeoffs against strong baselines.
+- Results suggest LLM-assisted recommendation can be practical when integrated carefully.
+
+### Potential Drawbacks
+- Recommendation gains can depend strongly on the dataset and user-interaction regime.
+- Production value still depends on cost controls and latency targets.
+
+## [MMGNN: Multi-Aspect Explanations for Graph Neural Networks]
+
+- **Authors:** Wenjie Du, Shuai Zhang, Di Wu, Jun Xia, Ziyuan Zhao, Junfeng Fang, Yang Wang
+- **Venue:** IJCAI 2024
+- **Year:** 2024
+- **Tags:** Explainable AI, Graph Neural Networks
+- **Paper Link:** https://dblp.org/rec/conf/ijcai/DuZWXZF024
+- **Code Link:** N/A
+
+### Short Summary
+MMGNN is an explainability paper for graph neural networks that focuses on multi-aspect explanations instead of a single importance score or subgraph. The paper is useful because explanation quality for GNNs often depends on capturing several interacting aspects of graph structure and features. By broadening the explanation object, the work aims to provide more faithful and informative interpretations. It strengthens the atlas’s explainability coverage with a mainstream IJCAI paper. It also keeps the graph-learning axis visible outside NeurIPS and AAAI.
+
+### Core Innovation
+- Multi-aspect explanations for graph neural network predictions.
+- Richer explanation target than single-score or single-subgraph approaches.
+- Clear contribution to the graph explainability literature.
+
+### Technical Approach
+- The method decomposes explanation into multiple complementary aspects of a graph decision.
+- It models structural and feature-level evidence jointly.
+- Explanations are optimized to remain faithful to the model’s predictive behavior.
+
+### Results
+- Evaluated on graph neural network benchmarks requiring explanation.
+- The paper reports more informative or faithful explanations than simpler baselines.
+- Results indicate that multi-aspect explanation better reflects how GNN decisions are formed.
+
+### Potential Drawbacks
+- Explanation quality is still difficult to evaluate definitively.
+- More expressive explanations can be harder for users to digest quickly.

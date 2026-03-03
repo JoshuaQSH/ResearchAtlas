@@ -247,3 +247,65 @@ This paper asks whether large language models can generate useful fuzzing inputs
 ### Potential Drawbacks
 - Coverage and reliability depend strongly on prompt design.
 - The method is more a testing workflow than a core model or systems contribution.
+
+## [TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings]
+
+- **Authors:** Norman P. Jouppi et al.
+- **Venue:** ISCA 2023
+- **Year:** 2023
+- **Tags:** AI Infrastructure, HPC
+- **Paper Link:** https://dblp.org/rec/conf/isca/JouppiK0MNNPSST23
+- **Code Link:** N/A
+
+### Short Summary
+The TPU v4 paper describes a supercomputer-scale ML system with architectural support tuned for modern recommendation and embedding-heavy workloads. It is important because it shows how cluster design, optical reconfiguration, and hardware support for irregular model components fit together in production-scale ML. The paper goes beyond a single accelerator chip and focuses on the full system. That makes it a strong atlas entry for infrastructure-aware machine learning. It also fills ISCA coverage with a clearly AI-centered architecture paper.
+
+### Core Innovation
+- Supercomputer-scale ML architecture with optical reconfiguration.
+- Hardware support for embedding-heavy workloads.
+- Full-system treatment of accelerator, network, and cluster design for ML.
+
+### Technical Approach
+- The design combines specialized ML hardware with a reconfigurable interconnect.
+- System features are tuned for large-scale distributed training and serving workloads.
+- The architecture pays special attention to embeddings and communication-heavy ML tasks.
+
+### Results
+- Evaluated on large machine-learning workloads inside production-style infrastructure.
+- The paper reports strong scalability and efficiency for ML-relevant tasks.
+- Results show system-level co-design is essential once accelerator clusters reach supercomputer scale.
+
+### Potential Drawbacks
+- The platform is highly specialized and difficult to reproduce outside large organizations.
+- Benefits depend on workloads that can exploit the custom interconnect and accelerator stack.
+
+## [ViTCoD: Vision Transformer Acceleration via Dedicated Algorithm and Accelerator Co-Design]
+
+- **Authors:** Haoran You et al.
+- **Venue:** HPCA 2023
+- **Year:** 2023
+- **Tags:** AI Infrastructure, GPU Optimization
+- **Paper Link:** https://dblp.org/rec/conf/hpca/YouSSYZZLLL23
+- **Code Link:** N/A
+
+### Short Summary
+ViTCoD targets the performance gap between generic accelerators and the particular structure of vision transformers. The paper co-designs algorithmic structure and accelerator behavior rather than treating the model as a fixed workload. That is valuable because transformers outside NLP bring different attention and tensor-shape constraints that hardware must handle efficiently. The work therefore sits at the intersection of model design and architecture design. It provides a clean HPCA entry with direct AI-system relevance.
+
+### Core Innovation
+- Co-design of vision-transformer algorithms and accelerator architecture.
+- Hardware-aware treatment of transformer-specific bottlenecks.
+- Strong emphasis on specialization rather than generic acceleration alone.
+
+### Technical Approach
+- The design analyzes attention and feed-forward components in vision transformers.
+- Accelerator dataflow and execution strategies are tuned to those workloads.
+- The paper studies how algorithm-level restructuring can improve hardware efficiency.
+
+### Results
+- Evaluated on representative vision-transformer workloads.
+- The paper reports improved efficiency relative to less specialized accelerator baselines.
+- Results support model-architecture co-design for transformer acceleration.
+
+### Potential Drawbacks
+- Specialization can limit portability to rapidly changing model designs.
+- Benefits may shrink for workloads that diverge from the target transformer patterns.
