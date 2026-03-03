@@ -222,6 +222,35 @@ Identify:
 - Top 5 research groups per field
 - Papers per year count
 
+## `CATALOGUA.md` Responsibilities
+
+You must maintain a root-level `CATALOGUA.md`.
+
+It MUST:
+- Include every paper currently tracked in the repository
+- Group entries by year and conference name
+- Preserve chronological ordering by year
+- Record, for each paper:
+  - title
+  - authors
+  - affiliations
+  - tags
+
+Minimum format:
+
+```Markdown
+## 2025
+
+### OSDI
+- <PAPER TITLE>, <AUTHORS>. Affiliations: <AFFILIATIONS>. [<TAGS>]
+```
+
+Rules:
+- If affiliations were not explicitly verified, write `Affiliations: N/A`
+- `CATALOGUA.md` must be updated in the same run whenever papers are added, removed, or retagged
+- Conference grouping should follow the names listed in `COFERENCES.md` when possible
+- Non-conference papers such as pure arXiv entries may be grouped under their source venue
+
 ## `README.md` Responsibilities
 
 You must update:
@@ -230,11 +259,22 @@ You must update:
 - Total paper count
 - Papers per topic per year table
 - Coverage table
+- Reference the current topic-growth figure when present
+- Mention whether all conferences in `COFERENCES.md` are represented
 
 You may generate:
 
 - Topic distribution plot
 - Paper growth plot
+
+## `figures/` Responsibilities
+
+When sufficient paper metadata exists, you should maintain a topic-growth line plot under `./figures`.
+
+Required output for this repository:
+- `figures/topic_growth_by_year.svg`
+
+The plot should visualize paper-count growth for each tag over the tracked years.
 
 ## Final Validation Before PR
 
@@ -248,12 +288,14 @@ You MUST perform:
 ### Duplication Check
 - No duplicate entries
 - No same paper across multiple categories
+- `CATALOGUA.md` is synchronized with the paper corpus
 
 ### Topic Validation
 - Tags match TOPICS.md
 
 ### Format Validation
 - Follow strict markdown template
+- `CATALOGUA.md` follows the required year / conference grouping format
 
 ## Automatic PR Workflow
 

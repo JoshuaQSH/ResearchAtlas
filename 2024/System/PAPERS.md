@@ -185,3 +185,34 @@ VeriSMo is a verified security module for confidential virtual machines running 
 ### Potential Drawbacks
 - Verification cost and engineering complexity are substantial.
 - The paper is less central to the atlas than model-serving or compiler work.
+
+## [Rethinking Machine Learning Inference Serving from User Perspectives]
+
+- **Authors:** Daniel Mendoza, Francisco Romero, Caroline Trippel
+- **Venue:** EuroSys 2024
+- **Year:** 2024
+- **Tags:** AI Infrastructure, GPU Optimization
+- **Paper Link:** https://dblp.org/rec/conf/eurosys/MendozaRT24
+- **Code Link:** N/A
+
+### Short Summary
+This EuroSys paper argues that machine-learning inference serving should be evaluated and optimized from user-facing objectives rather than only provider-centric throughput metrics. That framing matters because latency-critical workloads often care about tail behavior, quality of service, and model selection tradeoffs more than raw utilization. The paper therefore expands the design space for inference systems beyond conventional throughput-maximization. It is directly relevant to the atlas as a serving-systems contribution with operational focus. It also fills EuroSys coverage with a strong ML-serving paper.
+
+### Core Innovation
+- User-centric reframing of inference serving objectives.
+- Focus on latency-critical and service-level outcomes.
+- Practical systems perspective on ML inference beyond pure throughput.
+
+### Technical Approach
+- The work studies model selection and serving behavior under user-facing constraints.
+- It evaluates tradeoffs between latency, service quality, and infrastructure efficiency.
+- The system perspective emphasizes what users experience rather than only provider utilization.
+
+### Results
+- Evaluated on latency-critical ML inference serving scenarios.
+- The paper reports that user-centric choices can alter which serving strategies are preferred.
+- Results show that throughput-only evaluation can miss important operational tradeoffs.
+
+### Potential Drawbacks
+- User-centric optimization may complicate capacity planning and scheduling.
+- Findings depend on the exact workload and service-level objectives considered.

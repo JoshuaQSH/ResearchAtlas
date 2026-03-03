@@ -61,3 +61,34 @@ FlashAttention reframes exact attention as an IO problem instead of only a FLOP 
 ### Potential Drawbacks
 - Benefits depend on GPU architecture, sequence length, and implementation maturity.
 - Integrating the kernel into every framework and attention variant requires ongoing engineering.
+
+## [CompilerGym: Robust, Performant Compiler Optimization via Reinforcement Learning and Competition]
+
+- **Authors:** Chris Cummins et al.
+- **Venue:** CGO 2022
+- **Year:** 2022
+- **Tags:** Compiler Optimization, AI Infrastructure
+- **Paper Link:** https://dblp.org/rec/conf/cgo/CumminsWGCAGJLT22
+- **Code Link:** https://github.com/facebookresearch/CompilerGym
+
+### Short Summary
+CompilerGym turns compiler optimization into a standardized reinforcement-learning environment rather than a collection of one-off experimental setups. The paper matters because learned compiler optimization had been hard to compare rigorously across papers and codebases. By exposing compiler tasks through a common API, the work lowers the barrier for AI-based optimization research on real compiler pipelines. It also connects compiler research to the broader ecosystem of benchmark-driven ML systems work. The result is a practical research platform that made RL-for-compilers more reproducible.
+
+### Core Innovation
+- Standard environment abstraction for compiler optimization research.
+- Integration of compiler tasks with ML benchmarking and competition workflows.
+- Practical bridge between compiler engineering and learned optimization methods.
+
+### Technical Approach
+- Compiler passes and optimization objectives are wrapped in a reinforcement-learning interface.
+- The platform exposes states, actions, and rewards tied to real compiler behavior.
+- Evaluation emphasizes reproducibility and comparability across optimization strategies.
+
+### Results
+- Benchmarks include LLVM-based optimization tasks.
+- The paper reports that the platform supports robust experimentation with learned and heuristic methods.
+- Results show standardized environments can accelerate compiler-ML research iteration.
+
+### Potential Drawbacks
+- The environment abstraction does not eliminate the difficulty of generalizing across programs and architectures.
+- Learned policies remain expensive to train compared with many handcrafted heuristics.
