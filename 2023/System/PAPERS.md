@@ -61,3 +61,34 @@ Punica focuses on a problem that became urgent with the spread of LoRA adapters:
 ### Potential Drawbacks
 - Benefits shrink when request mixes are highly fragmented or adapters differ significantly in shape.
 - The design is specialized for LoRA-style updates rather than arbitrary fine-tuning methods.
+
+## [zpoline: A System Call Hook Mechanism Based on Binary Rewriting]
+
+- **Authors:** Kenichi Yasukata, Hajime Tazaki, Pierre-Louis Aublin, Kenta Ishiguro
+- **Venue:** USENIX ATC 2023
+- **Year:** 2023
+- **Tags:** AI Infrastructure, Hodgepodge
+- **Paper Link:** https://www.usenix.org/conference/atc23/presentation/yasukata
+- **Code Link:** N/A
+
+### Short Summary
+zpoline is not an AI paper, but it is a high-impact systems paper that fits the venue-coverage requirement and remains relevant to instrumentation-heavy ML infrastructure. The paper presents a user-space system-call hook mechanism that relies on binary rewriting rather than kernel changes. That lets the mechanism intercept calls broadly while preserving portability and low overhead. In practice, this kind of capability is useful for sandboxing, observability, and compatibility layers that can show up in large infrastructure stacks. It is included here as an explicit `Hodgepodge` entry because the fit to the atlas core is indirect.
+
+### Core Innovation
+- Binary-rewriting-based system-call hooking without kernel modification.
+- Broad coverage of system calls with low runtime overhead.
+- Practical design for instrumentation and compatibility tooling.
+
+### Technical Approach
+- Short system-call instructions are rewritten into jumps toward hook logic.
+- The mechanism avoids source-code requirements and specialized libc modifications.
+- The runtime preserves execution correctness while redirecting control to user-level hooks.
+
+### Results
+- Evaluated on x86-64 workloads involving interception and emulation tasks.
+- The paper reports low overhead while preserving exhaustive coverage.
+- Results demonstrate a clean systems design point compared with heavier kernel-level approaches.
+
+### Potential Drawbacks
+- The method is architecture-specific in its low-level implementation details.
+- It is only loosely related to AI systems compared with the atlas core material.

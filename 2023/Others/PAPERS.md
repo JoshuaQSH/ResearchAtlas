@@ -92,3 +92,158 @@ SparseGPT shows that large language models can be pruned effectively with a one-
 ### Potential Drawbacks
 - Kernel support for unstructured or semi-structured sparsity remains uneven in production systems.
 - Quality can degrade sharply at very high sparsity ratios.
+
+## [The Devil is in the Tails: How Long-Tailed Code Distributions Impact Large Language Models]
+
+- **Authors:** Xin Zhou, Kisub Kim, Bowen Xu, Jiakun Liu, DongGyun Han, David Lo
+- **Venue:** ASE 2023
+- **Year:** 2023
+- **Tags:** LLM Systems & Algorithms, Hodgepodge
+- **Paper Link:** https://conf.researchr.org/details/ase-2023/ase-2023-papers/66/The-Devil-is-in-the-Tails-How-Long-Tailed-Code-Distributions-Impact-Large-Language-M
+- **Code Link:** N/A
+
+### Short Summary
+This ASE paper studies a practical weakness of code LLMs: software corpora are long-tailed, and rare patterns can dominate failure cases. The paper examines how distribution imbalance affects model behavior instead of only headline average accuracy. That perspective is valuable because software-engineering use cases often care about precisely the rare cases that general-purpose code models miss. The work therefore complements mainstream LLM papers by focusing on deployment-relevant data skew. It is tagged `Hodgepodge` because the venue is software engineering, but the paper is clearly AI-related.
+
+### Core Innovation
+- Long-tail analysis of code LLM performance.
+- Shift from average-case evaluation to rare-pattern robustness.
+- Software-engineering framing of model-data mismatch.
+
+### Technical Approach
+- The study partitions code distributions into frequent and rare patterns.
+- It evaluates how language models degrade across these tails.
+- The analysis connects empirical behavior to data imbalance in code corpora.
+
+### Results
+- Benchmarks include code-modeling and code-understanding tasks.
+- The paper reports significant performance sensitivity to long-tail distribution effects.
+- Results argue for more careful training and evaluation on rare code patterns.
+
+### Potential Drawbacks
+- The work is primarily diagnostic rather than a full algorithmic fix.
+- Findings can depend on the exact code corpora used for analysis.
+
+## [An Empirical Study on Fine-Tuning Large Language Models of Code for Automated Program Repair]
+
+- **Authors:** Kai Huang, Xiangxin Meng, Jian Zhang, Yang Liu, Wenjie Wang, Shuhao Li, Yuqing Zhang
+- **Venue:** ASE 2023
+- **Year:** 2023
+- **Tags:** LLM Systems & Algorithms, Model Compression, Hodgepodge
+- **Paper Link:** https://conf.researchr.org/details/ase-2023/ase-2023-papers/98/An-Empirical-Study-on-Fine-tuning-Large-Language-Models-of-Code-for-Automated-Program
+- **Code Link:** N/A
+
+### Short Summary
+This paper evaluates whether code-focused LLMs can be fine-tuned effectively for automated program repair. Rather than introducing a new base model, it studies adaptation behavior, repair quality, and limitations in a software-engineering setting. That makes it useful for the atlas because it shows how LLM adaptation techniques transfer into a high-value engineering workflow. The findings are mostly empirical, but they reveal where generic code LLMs are brittle when moved into repair pipelines. It is another explicit venue-coverage entry with a clear AI connection.
+
+### Core Innovation
+- Empirical evaluation of code-LLM fine-tuning for automated repair.
+- Detailed focus on an applied software-engineering use case.
+- Clear comparison between generic code generation and repair-specific adaptation.
+
+### Technical Approach
+- Code LLMs are fine-tuned or adapted on repair-oriented datasets.
+- Evaluation measures patch plausibility and task-specific success rates.
+- The paper analyzes both improvements and common failure modes.
+
+### Results
+- Benchmarks involve automated program repair tasks on bug datasets.
+- The paper reports measurable gains from repair-oriented fine-tuning over untuned baselines.
+- Results also show remaining generalization and correctness limitations.
+
+### Potential Drawbacks
+- Repair success can still depend heavily on dataset construction and validation protocol.
+- The connection to the atlas core is weaker than systems or compiler papers.
+
+## [Multilingual Code Co-evolution using Large Language Models]
+
+- **Authors:** Jiyang Zhang, Pengyu Nie, Junyi Jessy Li, Milos Gligoric
+- **Venue:** FSE 2023
+- **Year:** 2023
+- **Tags:** LLM Systems & Algorithms, Hodgepodge
+- **Paper Link:** https://2023.esec-fse.org/details/fse-2023-research-papers/109/Multilingual-Code-Co-Evolution-Using-Large-Language-Models
+- **Code Link:** N/A
+
+### Short Summary
+This FSE paper studies how large language models can support co-evolution across multilingual codebases. That problem matters in real software systems because logic often spans multiple languages and synchronized changes are hard to maintain. The paper treats LLMs as assistants for coordinated evolution rather than only for single-file completion. It is relevant to the atlas because it reflects one of the main 2023 themes: LLMs moving into concrete developer workflows. The fit is software-engineering-heavy, so it is tagged `Hodgepodge`.
+
+### Core Innovation
+- LLM framing of multilingual co-evolution in software maintenance.
+- Focus on consistency across multiple programming languages.
+- Practical engineering task beyond standalone code completion.
+
+### Technical Approach
+- The system or study analyzes related changes across multilingual components.
+- Language models are used to propose, align, or evaluate coordinated edits.
+- The evaluation focuses on whether cross-language consistency can be improved.
+
+### Results
+- Evaluated on multilingual software-evolution scenarios.
+- The paper reports that LLM support can improve consistency or reduce manual effort in selected settings.
+- Results emphasize the promise and fragility of LLM assistance in maintenance tasks.
+
+### Potential Drawbacks
+- Correctness remains hard to guarantee across multiple languages and toolchains.
+- The paper is more software-maintenance-oriented than core AI systems work.
+
+## [Baldur: Whole-Proof Generation and Repair with Large Language Models]
+
+- **Authors:** Emily First, Markus N. Rabe, Talia Ringer, Yuriy Brun
+- **Venue:** FSE 2023
+- **Year:** 2023
+- **Tags:** LLM Systems & Algorithms, Compiler Optimization, Hodgepodge
+- **Paper Link:** https://2023.esec-fse.org/details/fse-2023-research-papers/2/Baldur-Whole-Proof-Generation-and-Repair-with-Large-Language-Models
+- **Code Link:** N/A
+
+### Short Summary
+Baldur applies large language models to proof generation and proof repair, connecting code-oriented LLM work with formal methods. This is not a central atlas topic, but it is a useful boundary case because it studies structured reasoning over formal artifacts. The paper explores whether language models can help generate whole proofs instead of only local edits. That places it near the broader reasoning-systems discussion even though the venue is software engineering. It is tagged `Hodgepodge` to make that boundary explicit.
+
+### Core Innovation
+- Whole-proof generation and repair with language models.
+- Application of LLMs to formal artifacts rather than natural-language-only tasks.
+- Bridge between software engineering and structured reasoning.
+
+### Technical Approach
+- The system represents proof states and repair objectives in a promptable form.
+- The language model proposes proof steps or repaired proofs.
+- The outputs are checked against the formal environment for validity.
+
+### Results
+- Evaluated on proof-generation and proof-repair tasks.
+- The paper reports promising gains relative to simpler heuristic or baseline approaches.
+- Results show both the potential and brittleness of LLMs in formal reasoning settings.
+
+### Potential Drawbacks
+- Formal validity remains a hard constraint that language models frequently violate.
+- The connection to the atlas core topics is indirect.
+
+## [Large Language Models Are Zero-Shot Fuzzers: Fuzzing Deep-Learning Libraries via Large Language Models]
+
+- **Authors:** Yinlin Deng, Chunqiu Steven Xia, Haoran Peng, Chenyuan Yang, Lingming Zhang
+- **Venue:** ISSTA 2023
+- **Year:** 2023
+- **Tags:** LLM Systems & Algorithms, Hodgepodge, AI Infrastructure
+- **Paper Link:** https://2023.issta.org/details/issta-2023-technical-papers/27/Large-Language-Models-Are-Zero-Shot-Fuzzers-Fuzzing-Deep-Learning-Libraries-via-Larg
+- **Code Link:** N/A
+
+### Short Summary
+This paper asks whether large language models can generate useful fuzzing inputs for deep-learning libraries with little or no task-specific tuning. That makes it unusually relevant to this atlas because the target systems are AI libraries rather than generic software alone. The work combines software testing methodology with a practical AI-infrastructure target. It is an example of how LLMs started to alter evaluation and bug-finding workflows around ML systems. The venue is outside the atlas core, but the technical target is close enough to include.
+
+### Core Innovation
+- Zero-shot fuzzing strategy driven by language models.
+- Direct application to deep-learning libraries rather than generic code only.
+- Practical link between LLM prompting and AI-system robustness testing.
+
+### Technical Approach
+- The model is prompted to generate inputs or programs likely to trigger unusual behaviors.
+- Generated artifacts are fed into fuzzing-style workflows for DL libraries.
+- The system measures whether model-generated cases expose crashes, inconsistencies, or edge cases.
+
+### Results
+- Benchmarks target testing of deep-learning libraries.
+- The paper reports that LLM-guided fuzzing can discover useful edge cases without heavy task-specific engineering.
+- Results support LLMs as flexible generators in testing pipelines.
+
+### Potential Drawbacks
+- Coverage and reliability depend strongly on prompt design.
+- The method is more a testing workflow than a core model or systems contribution.

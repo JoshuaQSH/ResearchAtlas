@@ -92,3 +92,96 @@ QServe is a representative paper from the wave of work that stopped treating qua
 ### Potential Drawbacks
 - The design is hardware-aware and may require retuning on new accelerators.
 - Aggressive low-bit settings still involve quality-risk tradeoffs on some tasks.
+
+## [SuperBench: Improving Cloud AI Infrastructure Reliability with Proactive Validation]
+
+- **Authors:** Yifan Xiong et al.
+- **Venue:** USENIX ATC 2024
+- **Year:** 2024
+- **Tags:** AI Infrastructure, GPU Optimization, HPC
+- **Paper Link:** https://www.usenix.org/conference/atc24/presentation/xiong
+- **Code Link:** N/A
+
+### Short Summary
+SuperBench studies gray failures in cloud AI infrastructure, where redundant systems continue to function but silently degrade ML performance. The paper argues that standard reliability mechanisms are not enough because performance regressions can remain hidden for long periods. It presents a proactive validation framework with a broad benchmark suite tailored to AI hardware and workloads. This is directly relevant to the atlas because cloud ML performance now depends as much on infrastructure validation as on model kernels. The work provides a concrete reliability perspective that complements pure throughput optimization papers.
+
+### Core Innovation
+- Proactive validation system for cloud AI infrastructure.
+- Focus on hidden degradation instead of only outright failures.
+- Broad benchmark suite tied to real AI workload behavior.
+
+### Technical Approach
+- The system runs targeted validation jobs across hardware components and configurations.
+- It compares signals across devices to detect silent performance degradation.
+- Benchmarks are chosen to approximate important AI training and inference behaviors.
+
+### Results
+- Evaluated in Microsoft cloud infrastructure settings.
+- The paper reports improved detection of hidden degradation and better root-cause localization.
+- Results show validation can prevent costly AI-performance regressions from lingering.
+
+### Potential Drawbacks
+- Coverage depends on the representativeness of the validation suite.
+- Operational deployment requires continuous maintenance as hardware fleets evolve.
+
+## [ServiceLab: Preventing Tiny Performance Regressions at Hyperscale through Pre-Production Testing]
+
+- **Authors:** Mike Chow et al.
+- **Venue:** OSDI 2024
+- **Year:** 2024
+- **Tags:** AI Infrastructure, HPC, Hodgepodge
+- **Paper Link:** https://www.usenix.org/conference/osdi24/presentation/chow
+- **Code Link:** N/A
+
+### Short Summary
+ServiceLab is a large-scale performance testing platform built to detect very small regressions before production rollout. The paper is not exclusively about AI, but it explicitly includes ML models among the workloads it validates at fleet scale. Its main contribution is operational: tiny regressions matter when they affect enormous deployments, so pre-production testing must be both statistically disciplined and operationally scalable. This perspective is increasingly relevant for AI services that consume massive infrastructure budgets. The paper is tagged `Hodgepodge` because it is more broadly systems-operational than AI-specific.
+
+### Core Innovation
+- Hyperscale pre-production platform for detecting extremely small regressions.
+- Statistical treatment of noisy infrastructure effects at fleet scale.
+- Operational systems contribution with direct ML-service relevance.
+
+### Technical Approach
+- The platform runs controlled performance experiments before broad deployment.
+- It models variance from machine, kernel, and datacenter factors to improve sensitivity.
+- The design emphasizes repeated large-scale measurement rather than isolated benchmarking.
+
+### Results
+- Evaluated on Meta services and ML workloads at very large scale.
+- The paper reports detection of tiny regressions that would otherwise waste significant fleet capacity.
+- Results show production-scale testing can materially reduce performance drift.
+
+### Potential Drawbacks
+- The platform relies on large internal infrastructure and may be hard to replicate externally.
+- Its relevance to core AI algorithms is indirect.
+
+## [VeriSMo: A Verified Security Module for Confidential VMs]
+
+- **Authors:** Ziqiao Zhou et al.
+- **Venue:** OSDI 2024
+- **Year:** 2024
+- **Tags:** AI Infrastructure, Hodgepodge
+- **Paper Link:** https://www.usenix.org/conference/osdi24/presentation/zhou
+- **Code Link:** N/A
+
+### Short Summary
+VeriSMo is a verified security module for confidential virtual machines running on AMD SEV-SNP. It is included because confidential-computing support is increasingly relevant to secure AI infrastructure, even though the paper is fundamentally a systems-security contribution. The work goes beyond memory-safe implementation claims by verifying critical properties of the module. That is valuable for infrastructure that may host sensitive training or inference workloads. The paper broadens the atlas toward infrastructure trust and isolation, with an explicit `Hodgepodge` tag because the AI link is indirect.
+
+### Core Innovation
+- Verified security module for confidential VMs.
+- Stronger assurance than implementation in Rust alone.
+- Relevant infrastructure primitive for sensitive compute workloads.
+
+### Technical Approach
+- The module is specified and verified against key security properties.
+- It targets AMD SEV-SNP and supports integrity and secret-management features.
+- Unsafe implementation details are controlled through a verified design pipeline.
+
+### Results
+- Evaluated as a functional confidential-VM security module.
+- The paper reports that strong assurance is achievable without abandoning practical deployment goals.
+- Results strengthen the case for formally justified infrastructure components.
+
+### Potential Drawbacks
+- Verification cost and engineering complexity are substantial.
+- The paper is less central to the atlas than model-serving or compiler work.

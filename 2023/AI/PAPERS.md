@@ -92,3 +92,65 @@ QLoRA made low-cost adaptation of large language models broadly accessible by co
 ### Potential Drawbacks
 - Performance depends on careful hyperparameter choices and quantization implementation details.
 - The method targets adaptation efficiency rather than maximal training throughput.
+
+## [Towards Fine-Grained Explainability for Heterogeneous Graph Neural Network]
+
+- **Authors:** Tong Li, Jiale Deng, Yanyan Shen, Luyu Qiu, Yongxiang Huang, Caleb Chen Cao
+- **Venue:** AAAI 2023
+- **Year:** 2023
+- **Tags:** Explainable AI, Graph Neural Networks
+- **Paper Link:** https://dblp.org/rec/conf/aaai/LiDSQHC23
+- **Code Link:** N/A
+
+### Short Summary
+This paper targets explainability for heterogeneous graph neural networks, where node and edge types make attribution harder than in homogeneous graphs. The core idea is to explain predictions at a finer granularity than earlier graph-explanation methods. That matters because many practical graph tasks depend on typed relations and diverse neighborhoods that collapse poorly into coarse explanations. The paper contributes a more structure-aware explanation formulation for heterogeneous settings. It is useful in this atlas because it closes the explainability gap with a graph-oriented method from a top AI venue.
+
+### Core Innovation
+- Fine-grained explanation method specialized for heterogeneous GNNs.
+- Better alignment between explanation outputs and typed graph structure.
+- Clear extension of graph explainability beyond homogeneous assumptions.
+
+### Technical Approach
+- The method scores relation- and structure-level components that influence a prediction.
+- It uses the heterogeneous graph schema to constrain what an explanation can highlight.
+- Explanations are optimized to remain faithful while preserving interpretability.
+
+### Results
+- Evaluated on heterogeneous graph benchmarks with node-classification style tasks.
+- The paper reports more faithful and informative explanations than generic baselines.
+- Results show explanation quality improves when graph heterogeneity is modeled explicitly.
+
+### Potential Drawbacks
+- Explanation metrics remain imperfect proxies for human usefulness.
+- Computational overhead can rise when many relation types are present.
+
+## [Scaling Up Dynamic Graph Representation Learning via Spiking Neural Networks]
+
+- **Authors:** Jintang Li et al.
+- **Venue:** AAAI 2023
+- **Year:** 2023
+- **Tags:** Graph Neural Networks, AI Infrastructure
+- **Paper Link:** https://dblp.org/rec/conf/aaai/LiYZC0ZTWM23
+- **Code Link:** N/A
+
+### Short Summary
+This paper explores dynamic graph representation learning through a spiking-neural-network formulation. The work is interesting because temporal graph updates and event-driven computation have a natural conceptual match. By using spiking dynamics, the model aims to scale dynamic-graph learning while preserving temporal sensitivity. The paper is also relevant to the atlas because it broadens graph-system design beyond standard transformer or message-passing recipes. It gives the graph-neural-network bucket more coverage from a mainstream AI venue.
+
+### Core Innovation
+- Event-driven dynamic graph learning with spiking neural networks.
+- Alternative scalability path for temporal graph representation learning.
+- Stronger fit between event streams and computational model.
+
+### Technical Approach
+- Dynamic graph interactions are encoded as temporally evolving signals.
+- A spiking architecture aggregates and propagates information over these graph events.
+- The design targets efficient updates rather than repeated full-graph recomputation.
+
+### Results
+- Evaluated on dynamic-graph representation benchmarks.
+- The paper reports competitive or improved predictive performance with scalable temporal handling.
+- Results suggest event-driven architectures can be practical for dynamic graph workloads.
+
+### Potential Drawbacks
+- Spiking architectures are less standardized than mainstream GNN baselines.
+- Adoption may be limited by framework maturity and implementation complexity.
