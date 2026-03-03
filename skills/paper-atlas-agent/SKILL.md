@@ -272,9 +272,11 @@ You may generate:
 When sufficient paper metadata exists, you should maintain a topic-growth line plot under `./figures`.
 
 Required output for this repository:
-- `figures/topic_growth_by_year.pdf`
+- `figures/generate_topic_growth.py`
+- `figures/topic_growth_by_year.png`
 
 The plot should visualize paper-count growth for each tag over the tracked years.
+The plotting script should live in `./figures` and be rerunnable after paper metadata changes.
 
 ## Final Validation Before PR
 
