@@ -61,3 +61,34 @@ BitNet b1.58 is one of the boldest compression claims in the recent LLM literatu
 ### Potential Drawbacks
 - Training and runtime support for such formats are still immature compared with 4-bit and 8-bit baselines.
 - The operational benefits depend on hardware and kernel support catching up.
+
+## [Collaborative Large Language Model for Recommender Systems]
+
+- **Authors:** Yaochen Zhu, Liang Wu, Qi Guo, Liangjie Hong, Jundong Li
+- **Venue:** WWW 2024
+- **Year:** 2024
+- **Tags:** LLM Systems & Algorithms, Explainable AI
+- **Paper Link:** https://dblp.org/rec/conf/www/ZhuWGHL24
+- **Code Link:** N/A
+
+### Short Summary
+This WWW paper studies how large language models can participate in recommender-system pipelines rather than only generating natural language around recommendations. The collaborative framing is important because recommender systems combine retrieval, ranking, user modeling, and explanation needs. The paper therefore sits at the boundary between LLM reasoning and explainable decision support. It is especially relevant to the atlas because recommendation remains one of the clearest real-world settings where explanations and large models intersect. The work gives the `Explainable AI` topic a broader application-facing entry.
+
+### Core Innovation
+- Collaborative use of LLMs inside recommendation workflows.
+- Connection between language reasoning and recommendation explainability.
+- Integration-oriented view rather than isolated generative evaluation.
+
+### Technical Approach
+- The system combines an LLM with recommendation-specific signals or modules.
+- It uses the model to improve interaction modeling, rationale generation, or coordination among recommendation components.
+- Evaluation focuses on both utility and the quality of generated recommendation support.
+
+### Results
+- Benchmarks target recommender-system tasks.
+- The paper reports gains over competitive recommendation baselines in selected settings.
+- Results suggest LLMs can add value when coupled tightly to structured recommendation pipelines.
+
+### Potential Drawbacks
+- Real production relevance depends on latency and cost constraints.
+- Explanatory usefulness can still diverge from actual decision faithfulness.

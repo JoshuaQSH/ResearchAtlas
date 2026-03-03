@@ -40,3 +40,6 @@ The atlas currently tracks papers in the following topic buckets. Papers may car
 
 ## HPC
 - High-performance computing methods, large-scale communication, and performance portability for AI systems.
+
+## Hodgepodge
+- Papers included to satisfy venue coverage when they are only weakly aligned with the atlas core topics; prefer AI-adjacent software, systems, or compiler work.

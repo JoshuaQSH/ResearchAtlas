@@ -61,3 +61,34 @@ Ring Attention studies how to scale context length by combining blockwise attent
 ### Potential Drawbacks
 - Communication overhead can dominate when interconnect performance is weak.
 - Integrating the method into full serving stacks requires careful scheduler support.
+
+## [CausalSim: A Causal Framework for Unbiased Trace-Driven Simulation]
+
+- **Authors:** Abdullah Alomar, Pouya Hamadanian, Arash Nasr-Esfahany, Anish Agarwal, Mohammad Alizadeh, Devavrat Shah
+- **Venue:** NSDI 2023
+- **Year:** 2023
+- **Tags:** AI Infrastructure, Distributed Deep Learning, HPC
+- **Paper Link:** https://www.usenix.org/conference/nsdi23/presentation/alomar
+- **Code Link:** N/A
+
+### Short Summary
+CausalSim studies a practical weakness in trace-driven systems evaluation: the collected traces are often biased by the policy that produced them. The paper reframes unbiased simulator construction as a causal inference problem instead of a pure replay problem. This matters for adaptive video, networking, and learned systems where naive replay can rank algorithms incorrectly. The system learns latent factors and uses randomized-control data to adjust the simulation so counterfactual interventions are more credible. It is a strong NSDI paper because it turns a methodological problem into a deployable evaluation framework.
+
+### Core Innovation
+- Causal reformulation of trace-driven simulation.
+- Use of randomized data and invariance structure to remove policy bias.
+- A practical framework for more reliable counterfactual systems evaluation.
+
+### Technical Approach
+- The method models observed traces together with latent variables that capture environment state.
+- It uses randomized control trial data to estimate a causal structure that supports unbiased simulation under new policies.
+- The core computation is cast as a tensor-completion style problem with strong structural assumptions.
+
+### Results
+- Evaluated on real and synthetic adaptive bitrate streaming data.
+- The paper reports lower simulation error than expert-designed and supervised baselines.
+- Results show that unbiased simulation can materially change the conclusions about competing algorithms.
+
+### Potential Drawbacks
+- The method depends on access to suitable randomized data.
+- Causal assumptions can still break under heavy distribution shift.
