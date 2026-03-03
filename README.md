@@ -44,7 +44,8 @@ ResearchAtlas is a curated paper atlas for systems, infrastructure, and algorith
 
 ## Figures
 
-![Topic growth by year](figures/topic_growth_by_year.svg)
+- [Topic growth by year (PDF)](figures/topic_growth_by_year.pdf)
+- The trend figure is stored as PDF because some Markdown renderers do not display the generated SVG correctly.
 
 ## Repository Layout
 
