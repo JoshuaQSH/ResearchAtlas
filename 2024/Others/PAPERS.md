@@ -278,3 +278,34 @@ DistillSeq targets safety-alignment testing for large language models and uses k
 ### Potential Drawbacks
 - Safety testing remains only a partial proxy for real-world harmful behavior.
 - The systems contribution is limited relative to core runtime papers.
+
+## [SCALE: A Structure-Centric Accelerator for Message Passing Graph Neural Networks]
+
+- **Authors:** Lingxiang Yin, Sanjay Gandham, Mingjie Lin, Hao Zheng
+- **Venue:** MICRO 2024
+- **Year:** 2024
+- **Tags:** Graph Neural Networks, AI Infrastructure, GPU Optimization
+- **Paper Link:** https://dblp.org/rec/conf/micro/YinGL024
+- **Code Link:** N/A
+
+### Short Summary
+SCALE is an accelerator paper aimed at message-passing graph neural networks, where irregular structure limits the effectiveness of generic accelerator designs. The paper emphasizes graph structure as the primary driver of hardware organization rather than treating GNNs as mildly modified dense models. That is important because structure-centric optimization is often the difference between theoretical and realized GNN acceleration. The work is relevant to the atlas as a hardware-systems contribution for graph workloads. It also gives MICRO direct coverage with a clearly AI-related architecture paper.
+
+### Core Innovation
+- Structure-centric accelerator design for message-passing GNNs.
+- Hardware mapping built around irregular graph computation patterns.
+- Strong focus on closing the gap between GNN theory and hardware efficiency.
+
+### Technical Approach
+- The accelerator is organized to handle message passing and aggregation efficiently.
+- Dataflow and storage decisions are optimized around graph structure rather than dense tensors.
+- The design reduces overheads from irregular access and sparse communication patterns.
+
+### Results
+- Evaluated on message-passing graph neural network workloads.
+- The paper reports improved efficiency compared with less specialized baselines.
+- Results show GNN acceleration benefits from hardware tailored to graph structure.
+
+### Potential Drawbacks
+- Specialized hardware may generalize poorly to other model families.
+- Gains depend on the target graph workload matching the accelerator assumptions.
