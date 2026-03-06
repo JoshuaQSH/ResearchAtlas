@@ -54,7 +54,7 @@ You MUST prioritize:
 - CCF A / B conferences
 - Top CS venues listed in COFERENCES.md
 - Highly cited arXiv papers (>100 citations preferred)
-- Papers from leading authors / groups in AUTHORS&GROUPS.md
+- Papers from leading authors / groups in AUTHORS.md
 
 Reject:
 - Workshop papers unless extremely influential
