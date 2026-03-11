@@ -71,3 +71,23 @@ This file is initialized in a conservative mode for the first run. Only fields t
 - Main Areas: reasoning models, large-scale pretraining, LLM algorithms
 - Total Citations: N/A
 - Top Papers: DeepSeek-V3, DeepSeek-R1
+
+## Uday Bondhugula
+- Field: compiler optimization, MLIR, code generation for AI accelerators
+- Affiliation: Indian Institute of Science (historical) / Plural Technology (historical and startup context)
+- Google Scholar Citations: N/A
+- h-index: N/A
+- Main Contributions: polyhedral compilation and MLIR-based AI compiler infrastructure (PolyBlocks)
+- Papers Per Year: 2026 (1)
+
+## NVIDIA Megatron Core Team
+- University/Company: NVIDIA
+- Main Areas: distributed MoE training, large-scale model systems, low-precision training
+- Total Citations: N/A
+- Top Papers: Scalable Training of Mixture-of-Experts Models with Megatron Core
+
+## Qualcomm AI Compiler Group
+- University/Company: Qualcomm
+- Main Areas: NPU compilation, MLIR lowering, Triton and PyTorch kernel deployment
+- Total Citations: N/A
+- Top Papers: Hexagon-MLIR

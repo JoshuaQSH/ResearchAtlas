@@ -173,3 +173,14 @@ Affiliations are recorded as `N/A` when they were not explicitly verified in the
 - BitNet b1.58 2B4T Technical Report, Microsoft Research et al.. Affiliations: N/A. [Model Quantization, Model Compression, GPU Optimization]
 - DeepEP: an Efficient Communication Library for MoE Training and Inference, DeepSeek-AI et al.. Affiliations: N/A. [Distributed Deep Learning, AI Infrastructure, HPC]
 - FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving, FlashInfer Team et al.. Affiliations: N/A. [LLM Systems & Algorithms, CUDA Kernels, GPU Optimization]
+
+## 2026
+
+### arXiv 2026
+- FlashAttention-4: Algorithm and Kernel Pipelining Co-Design for Asymmetric Hardware Scaling, Ted Zadouri, Markus Hoehnerbach, Jay Shah, Timmy Liu, Vijay Thakkar, Tri Dao. Affiliations: N/A. [CUDA Kernels, GPU Optimization, LLM Systems & Algorithms]
+- Hexagon-MLIR: An AI Compilation Stack For Qualcomm's Neural Processing Units (NPUs), Mohammed Javed Absar, Muthu Baskaran, Abhikrant Sharma, Abhilash Bhandari, Ankit Aggarwal, Arun Rangasamy, Dibyendu Das, Fateme Hosseini, Franck Slama, Iulian Brumar, Jyotsna Verma, Krishnaprasad Bindumadhavan, et al.. Affiliations: N/A. [Compiler Optimization, MLIR, AI Infrastructure]
+- MoEless: Efficient MoE LLM Serving via Serverless Computing, Hanfei Yu, Bei Ouyang, Shwai He, Ang Li, Hao Wang. Affiliations: N/A. [AI Infrastructure, Distributed Deep Learning, LLM Systems & Algorithms]
+- PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference, Rui Ning, Wei Zhang, Fan Lai. Affiliations: N/A. [AI Infrastructure, GPU Optimization, LLM Systems & Algorithms]
+- PolyBlocks: A Compiler Infrastructure for AI Chips and Programming Frameworks, Uday Bondhugula, Akshay Baviskar, Navdeep Katel, Vimal Patel, Anoop JS, Arnab Dutta. Affiliations: N/A. [Compiler Optimization, MLIR, AI Infrastructure]
+- Scalable Training of Mixture-of-Experts Models with Megatron Core, Zijie Yan, Hongxiao Bai, Xin Yao, Dennis Liu, Tong Liu, Hongbin Liu, Pingtian Li, Evan Wu, Shiqing Fan, Li Tao, Robin Zhang, Yuzhong Wang, et al.. Affiliations: N/A. [Distributed Deep Learning, AI Infrastructure, HPC]
+- TiledAttention: a CUDA Tile SDPA Kernel for PyTorch, Taimur Khan. Affiliations: N/A. [CUDA Kernels, GPU Optimization, Sparse Matrix & Kernels]

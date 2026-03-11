@@ -11,7 +11,9 @@ FIGURES_DIR = ROOT / "figures"
 OUTPUT_PATH = FIGURES_DIR / "topic_growth_by_year.png"
 TOPICS_PATH = ROOT / "TOPICS.md"
 
-YEARS = ["2022", "2023", "2024", "2025"]
+YEARS = sorted(
+    [path.name for path in ROOT.iterdir() if path.is_dir() and re.fullmatch(r"20\d{2}", path.name)]
+)
 COLORS = [
     "#0B3C5D",
     "#328CC1",
@@ -60,7 +62,7 @@ def load_topics() -> list[str]:
 
 
 def count_topics(topics: list[str]) -> dict[str, list[int]]:
-    counts = {topic: [0, 0, 0, 0] for topic in topics}
+    counts = {topic: [0 for _ in YEARS] for topic in topics}
     for paper_file in sorted(ROOT.glob("20*/**/PAPERS.md")):
         year = paper_file.parts[-3]
         if year not in YEARS:

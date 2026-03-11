@@ -3,9 +3,9 @@
 ResearchAtlas is a curated paper atlas for systems, infrastructure, and algorithms behind modern AI. The repository is organized by year and broad technical area, with a venue-coverage pass that now represents every conference listed in `COFERENCES.md`.
 
 ## Status
-- Last updated: 2026-03-03
-- Years covered: 2022-2025
-- Total papers tracked: 75
+- Last updated: 2026-03-11
+- Years covered: 2022-2026
+- Total papers tracked: 82
 - Awesome Papers tracked: 17
 - Test-of-Time / Influential awards tracked: 5
 - Conference venues represented: 31 / 31
@@ -18,25 +18,26 @@ ResearchAtlas is a curated paper atlas for systems, infrastructure, and algorith
 | 2023 | 25 | 3 | 5 | 5 | 2 | 10 |
 | 2024 | 29 | 7 | 4 | 5 | 3 | 10 |
 | 2025 | 10 | 2 | 1 | 3 | 1 | 3 |
+| 2026 | 7 | 2 | 1 | 1 | 2 | 1 |
 
 ## Topic Coverage Table
 
-| Topic | 2022 | 2023 | 2024 | 2025 |
-| --- | ---: | ---: | ---: | ---: |
-| Distributed Deep Learning | 4 | 4 | 3 | 1 |
-| Graph Neural Networks | 1 | 2 | 5 | 0 |
-| Explainable AI | 0 | 1 | 5 | 0 |
-| Sparse Matrix & Kernels | 1 | 3 | 3 | 2 |
-| Compiler Optimization | 2 | 3 | 2 | 1 |
-| Model Compression | 2 | 5 | 3 | 1 |
-| Model Quantization | 2 | 4 | 5 | 1 |
-| Hodgepodge | 0 | 7 | 9 | 0 |
-| LLM Systems & Algorithms | 3 | 11 | 11 | 8 |
-| AI Infrastructure | 8 | 11 | 14 | 4 |
-| MLIR | 1 | 0 | 0 | 0 |
-| CUDA Kernels | 1 | 1 | 2 | 2 |
-| GPU Optimization | 3 | 7 | 12 | 4 |
-| HPC | 2 | 5 | 3 | 1 |
+| Topic | 2022 | 2023 | 2024 | 2025 | 2026 |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Distributed Deep Learning | 4 | 4 | 3 | 1 | 2 |
+| Graph Neural Networks | 1 | 2 | 5 | 0 | 0 |
+| Explainable AI | 0 | 1 | 5 | 0 | 0 |
+| Sparse Matrix & Kernels | 1 | 3 | 3 | 2 | 1 |
+| Compiler Optimization | 2 | 3 | 2 | 1 | 2 |
+| Model Compression | 2 | 5 | 3 | 1 | 0 |
+| Model Quantization | 2 | 4 | 5 | 1 | 0 |
+| Hodgepodge | 0 | 7 | 9 | 0 | 0 |
+| LLM Systems & Algorithms | 3 | 11 | 11 | 8 | 3 |
+| AI Infrastructure | 8 | 11 | 14 | 4 | 5 |
+| MLIR | 1 | 0 | 0 | 0 | 2 |
+| CUDA Kernels | 1 | 1 | 2 | 2 | 2 |
+| GPU Optimization | 3 | 7 | 12 | 4 | 3 |
+| HPC | 2 | 5 | 3 | 1 | 1 |
 
 ## Catalog
 
@@ -57,6 +58,7 @@ figures/
 2023/
 2024/
 2025/
+2026/
 TOPICS.md
 COFERENCES.md
 AUTHORS&GROUPS.md
