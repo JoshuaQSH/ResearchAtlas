@@ -10,11 +10,17 @@ readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+tracking = [
+  "wandb>=0.19.0",
+]
+
 [project.scripts]
 research-atlas = "research_atlas_agent.cli:entrypoint"
 
 [dependency-groups]
 dev = [
+  "matplotlib>=3.8.0",
   "pytest>=8.3.0",
   "pytest-cov>=5.0.0",
   "ruff>=0.6.0",

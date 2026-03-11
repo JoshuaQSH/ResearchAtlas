@@ -1,0 +1,6 @@
+kernel_name,duration_ms
+fused_attention_fwd,3.21
+layernorm_backward,1.34
+gemm_8192x4096,6.18
+softmax_warp_reduce,0.92
+all_reduce_ring,2.77

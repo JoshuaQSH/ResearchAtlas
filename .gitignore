@@ -4,6 +4,7 @@ __pycache__/
 .ruff_cache/
 *.pyc
 experiments/runs/
+profiling/samples/*.png
 
 # Local artifacts
 *.log

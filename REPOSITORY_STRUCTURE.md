@@ -9,6 +9,7 @@
 - `src/research_atlas_agent/`: Core implementation package.
 - `tests/`: Unit tests using `pytest`.
 - `benchmarks/`: Benchmark scripts and benchmark instructions.
+- `profiling/`: Profiling utilities, sample profiling inputs, and plotting entrypoints.
 - `demos/`: Small demo scripts for end-to-end smoke validation.
 - `skills/code-experiments-agent/`: Skill configuration for branch-focused autonomous coding workflows.
 
@@ -16,11 +17,13 @@
 - Experiment execution engine: `src/research_atlas_agent/experiments.py`
 - Run metadata loading and summaries: `src/research_atlas_agent/analysis.py`
 - Command line interface: `src/research_atlas_agent/cli.py`
+- Profiling CSV loader and plot helper: `src/research_atlas_agent/profiling.py`
 
 ## Test coverage map
 - Experiment execution tests: `tests/test_experiments.py`
 - Metadata and summary tests: `tests/test_analysis.py`
 - CLI behavior tests: `tests/test_cli.py`
+- Profiling helper tests: `tests/test_profiling.py`
 
 ## Benchmark map
 - Runner overhead benchmark: `benchmarks/benchmark_runner_overhead.py`

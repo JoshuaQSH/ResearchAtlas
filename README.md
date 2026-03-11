@@ -35,6 +35,19 @@ docker run --rm researchatlas-code-lab
 uv run python benchmarks/benchmark_runner_overhead.py
 ```
 
+## Profiling
+```bash
+uv run python profiling/visualize_profile.py \
+  --input-csv profiling/samples/kernel_profile_example.csv \
+  --output-png profiling/samples/kernel_profile_example.png \
+  --palette violet
+```
+
+## Optional Tracking (`wandb`)
+```bash
+uv sync --dev --extra tracking
+```
+
 ## PR Rules
 - Every PR must pass `.github/workflows/ci.yml`.
 - Every behavior claim must include test evidence.

@@ -27,6 +27,13 @@ description: Build, debug, and maintain reproducible code-and-experiment workflo
 11. Keep GitHub Actions CI ready so PRs must pass tests.
 12. Keep a `benchmarks/` directory ready and run benchmarks when performance is relevant.
 13. Maintain a repository-structure markdown file that maps implementations to concrete file paths.
+14. Keep a `profiling/` directory ready for model and kernel profiling workflows.
+15. Maintain at least one reusable visualization helper for profiling-result plots.
+16. Use `wandb` to track model training when experiment tracking is needed.
+17. Prefer these plotting palettes:
+    - Violet set: `#ECDFFF`, `#D4C4EE`, `#BDAADE`, `#A690CF`, `#8E78BF`, `#8C75BC`, `#6A579C`
+    - Blue set: `#aed0ee`, `#88abda`, `#6f94cd`, `#5976ba`, `#2e59a7`, `#145ca0`
+    - Slate-blue set: `#3658a1`, `#7393c6`, `#8ba8d6`, `#a4b8db`, `#d3e1ef`, `#d2dee5`, `#bdcbd7`, `#b7d3dd`, `#99b4cc`, `#82a4ca`
 
 ## Branch Policy
 - This branch is code and experiments only.
