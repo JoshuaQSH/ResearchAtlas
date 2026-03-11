@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code & Experiments Agent"
+  short_description: "Reproducible coding and experiments"
+  default_prompt: "Implement, debug, and validate one module at a time with runnable tests, reproducible experiments, Docker, and CI."
